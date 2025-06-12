@@ -1,0 +1,39 @@
+New Columns:
+----------------------------------------------------
+Unit Price =  DIVIDE(Orders[Sales], Orders[Quantity] * (1-Orders[Discount]))
+
+Profit Status = 
+SWITCH(
+    TRUE(),
+    Orders[Profit] > 0, "Profit",
+    Orders[Profit] < 0, "Loss",
+    "No Gain"
+)
+
+New Category = 
+IF( AND(Orders[Sales] > 1000, Orders[Profit] > 100) , "High Value" , "Regular")
+
+New Category 2 = 
+IF( Orders[Sales] > 1000 && Orders[Profit] > 100 , "High Value" , "Regular")
+
+Discount Flag = 
+IF(
+    OR(Orders[Discount] > 0.2, AND(Orders[Discount] > 0, Orders[Quantity] > 10)), 
+    "Bulk/High Discount", "Normal"
+    )
+
+Quantity (Buckets) = 
+SWITCH(
+    TRUE(),
+    Orders[Quantity] > 10, "11-14",
+    Orders[Quantity] > 4, "5-10",
+    "Below 5")
+
+
+
+
+
+
+
+
+

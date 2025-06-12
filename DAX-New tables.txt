@@ -1,0 +1,41 @@
+Fiscal Year/ Financial Year: CALENDARAUTO
+	April 2025 - March 2026
+	May 2025 - April 2026
+
+Calendar Year: Jan - Dec
+
+CALENDAR(start-date, end-date)
+CALENDARAUTO(financial-year-end-month-num)
+
+Year = YEAR('Calendar'[Date])
+Quarter = QUARTER('Calendar'[Date])
+Month = Month('Calendar'[Date])
+Day = DAY('Calendar'[Date])
+Weekday = WEEKDAY('Calendar'[Date])
+Week No. = WEEKNUM('Calendar'[Date])
+Month Name = FORMAT('Calendar'[Date], "MMMM")
+Day Name = FORMAT('Calendar'[Date], "DDDD")
+
+Filter Tables:
+
+Orders (India) = FILTER(Orders, Orders[Country] = "India")
+
+Orders (India & France) = FILTER(Orders, Orders[Country] IN {"India", "France"})
+
+Orders (C:India AND S:Maharashtra) = FILTER(Orders, Orders[Country] = "India" && Orders[State] = "Maharashtra")
+
+Orders (C:India OR S: Corporate) = FILTER(Orders, Orders[Country] = "India" || Orders[Segment] = "Corporate")
+
+Orders(Returned) = Orders (Returned) = FILTER(Orders, RELATED(Returns[Returned]) = "Yes")
+
+Note: 
+Single match : = (equals)
+Multiple Matches : IN 
+AND: &&
+OR: ||
+
+
+
+
+
+
