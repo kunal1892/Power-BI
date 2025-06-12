@@ -1,0 +1,29 @@
+CY Sales = SUM(Orders[Sales])
+
+PY Sales = CALCULATE(SUM(Orders[Sales]), PREVIOUSYEAR('Calendar'[Date]))
+
+NY Sales = CALCULATE(SUM(Orders[Sales]), NEXTYEAR('Calendar'[Date]))
+
+YoY Sales = [CY Sales] - [PY Sales]
+
+% Growth = DIVIDE( [YoY Sales] , [PY Sales] , 0)
+
+% Growth = DIVIDE( [CY Sales] - [PY Sales] , [PY Sales] , 0)
+
+Growth Flag = IF([% Growth] > 0, 1, -1)
+
+Sales 2Y after = 
+CALCULATE( SUM(Orders[Sales]) , DATEADD( 'Calendar'[Date] , 2 , YEAR ))
+
+Sales 2Y before = 
+CALCULATE( SUM(Orders[Sales]) , DATEADD('Calendar'[Date] , -2 , YEAR ))
+----------------------------------------------------------------------------------------------------------------
+
+YoY (Year-Over-Year) = Difference between current year n prev. year performance
+ 
+YoY sales = CY Sales - PY Sales
+
+% Growth =    CY Sales - PY Sales     =      YoY
+                       --------------------------          -------------
+                                 PY sales                       PY sales
+
