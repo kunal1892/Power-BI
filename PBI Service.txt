@@ -1,0 +1,103 @@
+Power BI Service: Power BI on Cloud/ Power BI SaaS
+
+1) Access Power BI Service? 
+		-- app.powerbi.com
+		-- biz/university email
+
+2) License & Features
+		-- Power BI Service has Features (Free + Paid)
+		-- to access paid Features - Purchase License
+		-- 3 License Types
+			1) Free
+			2) Pro (10$/month)
+			3) Premium per user (20$/month)
+
+3) Publish Report to Power BI Service
+		-- in workspace
+		-- open report in two modes -- 1) Read 2) Edit
+
+4) Workspaces 
+	-- Containers to store - reports, data models, dashboards etc
+	-- 2 Types:
+		1) Personal (only one - Default)
+		2) Shared (multiple- can be created)
+	-- Adding users to shared workspace
+
+5) User Access
+	-- 4 Types of access
+		1) Viewer : Read
+		2) Contributor : Read + Edit
+		3) Member : Read + Edit + Add Members
+		4) Admin : Read + Edit + Add Members + Remove Members
+
+-- Power BI Identifies dashboards & Reports Individually
+
+6) Dashboards Vs Reports :
+	Report:
+	-- Collection of Visuals 
+	-- can be multi page
+	-- detailed analysis
+	-- has Interactivity (Filters, bookmarks, parameters, etc)
+	-- can be created in Power BI Desktop & Power BI Service
+	
+	Dashboard:
+	-- collection of visuals
+	-- always single page
+	-- At glance decision Making
+	-- can be created in Power BI Service only
+	-- not interactive (filters cannot be added but has QnA)
+	-- Single Page Canvas -- Pin the imp visuals from the report
+
+7) Report Publish, Share, Collaborate
+	-- Share the report Individually -- manage permissions > Direct Access
+	-- publish report to the shared workspace
+	-- Collaboration : Multiple users editing same report --> Shared workspace --> minimum Contributor access
+
+Examples:
+1) Manger - Edit : Contributor
+2) Employee- Read : Viewer
+3) Employee - Not a user of power bi : PDF
+4) Present the report to group of people
+		Offline: PPT
+		Online: Teams
+
+Sharing & Collaboration by License:
+Pro -> Pro
+Premium -> All members (Free, Pro, premium)
+Free -> Sharing & Collaboration not available for Free License
+
+8) Report Refresh
+	-- Gateways are required for data imported from offline files
+	-- 3 Types:
+		-- 1) Manual Refresh
+		-- 2) Auto-Refresh/ Schedule refresh
+		-- 3) Incremental Refresh (Premium users)
+
+	-- Refreshes by License:
+		1) Free - 1/day
+		2) Pro - 8 times/day
+		3) Premium Per user - 48 times/day
+
+9) RLS
+
+10) ETL in Power BI Service
+	
+	Power BI Desktop           			Power Bi Service
+------------------------------------------------------------------------------------------
+	ETL - Power Query Editor           		ETL - dataflows
+	Data Modeling:
+		Create Relationships			Cannot Create relationships
+		DAX Columns, Measures		Yes
+	Extract data, Create Report			Yes with limited report creation options
+
+
+
+
+
+
+
+
+
+
+
+
